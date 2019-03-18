@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Social Finder</title>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+
+    <link href="assets/css/material-kit.css?v=2.0.5" rel="stylesheet">
+    <link href="assets/css/loader.css" rel="stylesheet">
+
+    <style>
+      .card {
+        margin: 40px 50px;
+      }
+
+      .masonry { /* Masonry container */
+        column-count: 5;
+        column-gap: 0rem;
+      }
+
+      .item { /* Masonry bricks or child elements */
+        background-color: #eee;
+        display: inline-block;
+        margin: 0 0 1em;
+        width: 100%;
+      }
+    </style>
+  </head>
+
+  <body id="bd" style="background-image:url('assets/img/crowd1.png');">
+    <nav class="navbar navbar-expand-lg bg-primary">
+      <div class="container">
+        <div class="navbar-translate">
+          <a class="navbar-brand" href="index.html"><b>Social Finder</b></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a th:href="@{Brand_Engagement}" class="nav-link">Back To Dashboard</a>
+            </li>
+          </ul>
+
+          <div class="form-group no-border" style="margin-left:600px;margin-top:0px;margin-bottom:0px;">
+            <input type="text" id="inp" class="form-control" placeholder="Search">
+          </div>
+          <button id="search" type="button" class="btn btn-white btn-just-icon btn-round">
+            <i class="material-icons">search</i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <div id="title_sf" style="display:block;" class="page-header header-filter clear-filter" data-parallax="true">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 ml-auto mr-auto">
+            <div class="brand">
+              <h1 style="font-size:70px;"><b><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Social Finder</b><img src="assets/img/search.png" height="100px" width="100px" /></h1>
+              <h3><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Find People or #tags from the Social Network !!</b></h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="page" style="display:none;" class="container">
+
+      <div id="srchres" class="row">
+        <div class="col-md-8 ml-auto mr-auto">
+          <div class="brand text-center">
+            <h1><img src="assets/img/search.png" width="55px" height="55px" /> Search Results...</h1>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="load" style="display:none;" class="loader"></div>
+
+    <div id="root"></div>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
